@@ -28,63 +28,67 @@
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    
 
-    <FrameLayout
-        android:id="@+id/flTimer"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <ProgressBar
+        android:id="@+id/pbTimer"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/gray_progressbar_background"
+        android:indeterminate="false"
+        android:max="10"
+        android:progress="10"
+        android:progressDrawable="@drawable/blue_progressbar_background"
+        android:rotation="-90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308">
-        <ProgressBar
-            android:id="@+id/pbTimer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:indeterminate="false"
-            android:max="10"
-            android:progress="10"
-            android:rotation="-90"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:background="@drawable/gray_progressbar_background"
-            android:progressDrawable="@drawable/blue_progressbar_background"
-        >
-    </ProgressBar>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-        </LinearLayout>
-
-        <Chronometer
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:textColor="#E1F4FF"
-            android:textSize="60sp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView" />
-
-    </FrameLayout>
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
         android:id="@+id/toggleButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="150dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/start"
         android:background="@drawable/strt_pause_btn_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:padding="10dp"
+        android:text="@string/_place_holder_time"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
