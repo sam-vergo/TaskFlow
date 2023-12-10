@@ -61,6 +61,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
+    <ToggleButton
+        android:id="@+id/resetButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/stop_button"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton" />
 
     <EditText
         android:id="@+id/editTextText"

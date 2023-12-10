@@ -6,6 +6,6 @@
         />
     <item
         android:state_checked="true"
-        android:drawable="@drawable/stop_button"
+        android:drawable="@drawable/pause_button"
         />
 </selector>
