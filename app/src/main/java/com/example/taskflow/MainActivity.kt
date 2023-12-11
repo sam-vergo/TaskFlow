@@ -2,21 +2,42 @@ package com.example.taskflow
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.taskflow.databinding.ActivityMainBinding
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var dataHelper: DataHelper
-
     private val timer = Timer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         dataHelper = DataHelper(applicationContext)
+        setContentView(binding.root)
 
+        //setContentView(binding.root)
+        //replaceFragment(Home())
+
+        /*navbar*/
+        binding.bottomNavigationView.setOnItemReselectedListener {
+            when(it.itemId){
+               //R.id.timer -> replaceFragment(Home())
+                R.id.calendar -> replaceFragment(Calendar())
+                R.id.statistics-> replaceFragment(Statistics())
+                R.id.shop-> replaceFragment(Shop())
+
+                else -> {
+
+
+                }
+            }
+            true
+        }
+
+
+        /*timer*/
         binding.toggleButton.setOnClickListener { startStopAction() }
         binding.resetButton.setOnClickListener { resetAction() }
 
@@ -27,6 +48,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         timer.scheduleAtFixedRate(TimeTask(), 0, 500)
+    }
+
+    private fun replaceFragment(fragment : Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.commit()
     }
 
     private inner class TimeTask : TimerTask() {

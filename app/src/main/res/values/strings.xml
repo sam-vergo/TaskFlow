@@ -3,4 +3,6 @@
     <string name="start">start</string>
     <string name="_place_holder_time">00:00:00</string>
     <string name="stop">Stop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

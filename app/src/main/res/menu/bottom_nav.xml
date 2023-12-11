@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Timer"
+        android:id="@+id/timer"
+        android:icon="@drawable/timer"/>
+
+    <item android:title="Calendar"
+        android:id="@+id/calendar"
+        android:icon="@drawable/calendar"/>
+
+    <item android:title="Statistics"
+        android:id="@+id/statistics"
+        android:icon="@drawable/stat"/>
+
+    <item android:title="Shop"
+        android:id="@+id/shop"
+        android:icon="@drawable/shop"/>
+</menu>
