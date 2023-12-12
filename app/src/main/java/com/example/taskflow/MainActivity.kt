@@ -8,7 +8,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    lateinit var dataHelper: DataHelper
+    private lateinit var dataHelper: DataHelper
     private val timer = Timer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,23 +18,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //setContentView(binding.root)
-        //replaceFragment(Home())
+       // replaceFragment(Home())
 
+/*
         /*navbar*/
-        binding.bottomNavigationView.setOnItemReselectedListener {
-            when(it.itemId){
-               //R.id.timer -> replaceFragment(Home())
+        binding.bottomNavigationView.setOnItemReselectedListener { it ->
+            when (it.itemId) {
+                R.id.timer -> replaceFragment(Home())
                 R.id.calendar -> replaceFragment(Calendar())
-                R.id.statistics-> replaceFragment(Statistics())
-                R.id.shop-> replaceFragment(Shop())
+                R.id.statistics -> replaceFragment(Statistics())
+                R.id.shop -> replaceFragment(Shop())
 
                 else -> {
-
 
                 }
             }
             true
         }
+        */
+
 
 
         /*timer*/
@@ -50,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         timer.scheduleAtFixedRate(TimeTask(), 0, 500)
     }
 
-    private fun replaceFragment(fragment : Fragment){
+    private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.commit()
