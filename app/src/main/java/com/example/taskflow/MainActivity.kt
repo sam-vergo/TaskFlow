@@ -17,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         dataHelper = DataHelper(applicationContext)
         setContentView(binding.root)
 
+       /*binding.home.setOnClickListener {
+            replaceFragmentMain(MainActivity())
+        }*/
+        binding.tasks.setOnClickListener {
+            replaceFragment(Calendar())
+        }
+        binding.shop.setOnClickListener {
+            replaceFragment(Shop())
+        }
         //setContentView(binding.root)
        // replaceFragment(Home())
 
@@ -52,9 +61,11 @@ class MainActivity : AppCompatActivity() {
         timer.scheduleAtFixedRate(TimeTask(), 0, 500)
     }
 
+
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragmentContainer, fragment)
         fragmentTransaction.commit()
     }
 

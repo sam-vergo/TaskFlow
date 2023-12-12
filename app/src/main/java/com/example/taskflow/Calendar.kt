@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class Calendar : Fragment() {
+class Calendar : Fragment(R.layout.fragment_calendar) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

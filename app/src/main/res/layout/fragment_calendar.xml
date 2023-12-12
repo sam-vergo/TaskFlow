@@ -22,7 +22,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-black"
-        android:text="Calendar"
+        android:text="@string/tasks"
         android:textColor="#E1F4FF"
         android:textSize="34sp"/>
 
